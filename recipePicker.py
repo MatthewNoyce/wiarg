@@ -8,8 +8,8 @@ import pyglet
 
 bg_colour = "#3d6466"
 
-pyglet.font.add_file(r"C:\Users\matth\Documents\wiarg\starter_files\fonts\Ubuntu-Bold.ttf")
-pyglet.font.add_file(r"C:\Users\matth\Documents\wiarg\starter_files\fonts\Shanti-Regular.ttf")
+# pyglet.font.add_file(r"C:\Users\matth\Documents\wiarg\starter_files\fonts\Ubuntu-Bold.ttf")
+# pyglet.font.add_file(r"C:\Users\matth\Documents\wiarg\starter_files\fonts\Shanti-Regular.ttf")
 
 def clear_widgets(frame):
     for widget in frame.winfo_children():
@@ -58,9 +58,9 @@ def load_frame1():
     logo_widget.image = logo_img
     logo_widget.pack()
     #title
-    tk.Label(frame1, text="Recipe", bg=bg_colour, fg="white", font=("Shanti", 14)).pack(pady=20)
+    tk.Label(frame1, text="Recipe", bg=bg_colour, fg="white", font=("TkMenuFont", 14)).pack(pady=20)
     #button widget
-    tk.Button(frame1, text="shuffle", font=("Ubuntu", 20), bg="#28393a", fg="white", cursor="hand2", activebackground="#badee2", activeforeground="black", command=lambda:load_frame2()).pack(pady=20)
+    tk.Button(frame1, text="shuffle", font=("TkHeadingFont", 20), bg="#28393a", fg="white", cursor="hand2", activebackground="#badee2", activeforeground="black", command=lambda:load_frame2()).pack(pady=20)
 
 
 def load_frame2():
@@ -74,12 +74,12 @@ def load_frame2():
     logo_widget.image = logo_img
     logo_widget.pack(pady=20)
     #title
-    tk.Label(frame2, text=title, bg=bg_colour, fg="white", font=("Ubuntu", 20)).pack(pady=25)
+    tk.Label(frame2, text=title, bg=bg_colour, fg="white", font=("TkHeadingFont", 20)).pack(pady=25)
     #ingredients list
     for i in ingredients:
-        tk.Label(frame2, text=i, bg="#28393a", fg="white", font=("Shanti", 12)).pack(fill="both")
+        tk.Label(frame2, text=i, bg="#28393a", fg="white", font=("TkMenuFont", 12)).pack(fill="both")
     #back button
-    tk.Button(frame2, text="back", font=("Ubuntu", 18), bg="#28393a", fg="white", cursor="hand2", activebackground="#badee2", activeforeground="black", command=lambda:load_frame1()).pack(pady=20)
+    tk.Button(frame2, text="back", font=("TkHeadingFont", 18), bg="#28393a", fg="white", cursor="hand2", activebackground="#badee2", activeforeground="black", command=lambda:load_frame1()).pack(pady=20)
 
     
 
